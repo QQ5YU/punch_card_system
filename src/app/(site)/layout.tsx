@@ -1,16 +1,13 @@
-import "./globals.css";
+"use client";
+
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import DesktopSidebar from "../components/sidebar/DesktopSidebar";
+import Header from "./components/Header";
 
 export const metadata: Metadata = {
   title: "Line@ 打卡後臺管理系統",
   description: "打卡後臺管理系統",
 };
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export default function RootLayout({
   children,
@@ -19,7 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="flex">
+          <DesktopSidebar />
+          <Header />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

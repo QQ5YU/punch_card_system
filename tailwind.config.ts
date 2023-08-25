@@ -13,6 +13,19 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        loginInputColor: "#F1F8FA",
+        buttonHoverColor: "#0AACDD90",
+        buttonOrangeColor: "#DD614A",
+        buttonBlueColor: "#0AACDD",
+        mainBlue: "#043593",
+        darkBlue: "#1B2751",
+      },
+      boxShadow: {
+        input:
+          " 0 10px 15px -3px rgb(4 53 147 / 0.2), 0 4px 6px -4px rgb(4 53 147 / 0.2)",
+        record: "0px 0px 4px 0px rgba(0, 0, 0, 0.25)",
+      },
     },
   },
   plugins: [],
