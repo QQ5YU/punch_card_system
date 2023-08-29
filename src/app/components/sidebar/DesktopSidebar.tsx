@@ -6,10 +6,10 @@ import Footer from "./Footer";
 export default function DesktopSidebar() {
   const routes = useRoutes();
   return (
-    <aside className="hidden md:block w-1/3 min-w-[330px] max-w-[360px] bg-[#FBFBFB] min-h-screen relative">
-      <header className="flex items-center py-[43px]  mx-[44px]">
-        <Image src="/images/logo.svg" width={55} height={55} alt="logo" />
-        <h1 className=" ml-2 text-2xl text-mainBlue font-bold">
+    <aside className="hidden md:block w-1/3 min-w-[200px] max-w-[240px] bg-[#FBFBFB] min-h-screen relative outline outline-2 outline-gray-200">
+      <header className="flex bg-[#FFF] py-[35px] mx-[0px] outline outline-2 outline-gray-200">
+        <Image className="mx-[10px]" src="/images/logo.svg" width={30} height={30} alt="logo" />
+        <h1 className=" text-[18px] text-mainBlue font-bold">
           金屬工業發展研究中心
         </h1>
       </header>

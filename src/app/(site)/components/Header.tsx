@@ -1,10 +1,23 @@
 import Image from "next/image";
+import Input from "./Input";
 
 export default function Header() {
   return (
-    <header className="flex justify-center md:justify-start items-center sm:ml-14 mt-[55px] mb-[40px]">
-      <Image src="images/logo.svg" width={55} height={55} alt="logo" />
-      <h1 className=" ml-2 text-3xl text-mainBlue font-bold">Line@ 打卡後臺管理系統</h1>
+    <header className="flex h-[101px] outline outline-2 outline-gray-200">
+      {/* <Image src="/images/employeeManagement/search.svg" width={55} height={55} alt="search" />
+      <input className="flex-1 outline outline-1 outline-gray-300 rounded-md" type="search" placeholder="Search anything that comes to mind"></input> */}
+      <div className="flex">
+        <Input
+          inputType="text"
+          id="search"
+          name="search"
+          placeholder="Search anything that comes to mind"
+          inputClassName=""
+          buttonType="submit"
+          src="/images/employeeManagement/search.svg"
+          alt="search"
+        />
+      </div>
     </header>
   );
 }

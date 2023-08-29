@@ -19,8 +19,10 @@ export default function RootLayout({
       <body>
         <div className="flex">
           <DesktopSidebar />
-          <Header />
-          {children}
+          <div className="flex-col">
+            <Header />
+            {children}
+          </div>
         </div>
       </body>
     </html>

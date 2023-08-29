@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { FC } from "react";
+import Image from "next/image";
 
 interface InputProps {
   onClick?: () => void;
@@ -11,7 +11,7 @@ interface InputProps {
   name: string;
   placeholder: string;
   buttonType: "submit" | "button";
-  imgSrc: string;
+  src: string;
   alt: string;
 }
 
@@ -24,7 +24,7 @@ const Input: FC<InputProps> = ({
   readOnly,
   inputClassName,
   buttonType,
-  imgSrc,
+  src,
   alt,
 }) => {
   const inputProps = {
@@ -34,7 +34,7 @@ const Input: FC<InputProps> = ({
   return (
     <div className="relative mt-6 ml-1">
       <input
-        className={`border-transparent rounded-[10px] bg-[#EAEAEA] w-[38%] min-w-[390px] max-w-[420px] h-12 px-7 outline-none  ${inputClassName}`}
+        className={`border-transparent rounded-[10px] w-[38%] min-w-[390px] max-w-[420px] h-12 px-7 outline outline-2 outline-gray-200  ${inputClassName}`}
         type={inputType}
         id={id}
         onClick={onClick}
@@ -42,13 +42,13 @@ const Input: FC<InputProps> = ({
         placeholder={placeholder}
         {...inputProps}
       />
-      <span className="absolute bg-[#EAEAEA] w-[22px] h-[22px] pointer-events-none top-[14px] right-7">
+      <span className="absolute  w-[22px] h-[22px] pointer-events-none top-[14px] right-7">
         <button
           type={buttonType}
           title="button"
           className="border-none bg-transparent"
         >
-          <Image src={imgSrc} alt={alt} width={21} height={12} />
+          <Image src={src} alt={alt} width={25} height={25} />
         </button>
       </span>
     </div>
