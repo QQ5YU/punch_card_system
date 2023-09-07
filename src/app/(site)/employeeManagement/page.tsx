@@ -9,7 +9,7 @@ import Title from "../components/Title";
 export default function UserLocationPage() {
   const [ischeckIn, setIscheckIn] = useState<boolean>(false);
   return (
-    <div className="flex justify-center items-center flex-col w-[38.08%] min-w-[360px] max-w-[390px] mx-auto">
+    <div className="flex flex-col w-[38.08%] min-w-[360px] max-w-[390px] mx-auto">
       <Title text="員工管理" />
     </div>
   );

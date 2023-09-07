@@ -33,16 +33,7 @@ const Input: FC<InputProps> = ({
 
   return (
     <div className="relative mt-6 ml-1">
-      <input
-        className={`border-transparent rounded-[10px] w-[38%] min-w-[390px] max-w-[420px] h-12 px-7 outline outline-2 outline-gray-200  ${inputClassName}`}
-        type={inputType}
-        id={id}
-        onClick={onClick}
-        name={name}
-        placeholder={placeholder}
-        {...inputProps}
-      />
-      <span className="absolute  w-[22px] h-[22px] pointer-events-none top-[14px] right-7">
+      <span className="absolute  w-[22px] h-[22px] pointer-events-none top-[14px] mx-24">
         <button
           type={buttonType}
           title="button"
@@ -51,6 +42,15 @@ const Input: FC<InputProps> = ({
           <Image src={src} alt={alt} width={25} height={25} />
         </button>
       </span>
+      <input
+        className={`border-transparent rounded-[10px] h-12 px-14 outline outline-2 outline-gray-200  ${inputClassName}`}
+        type={inputType}
+        id={id}
+        onClick={onClick}
+        name={name}
+        placeholder={placeholder}
+        {...inputProps}
+      />
     </div>
   );
 };
