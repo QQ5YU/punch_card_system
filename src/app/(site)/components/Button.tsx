@@ -1,22 +1,36 @@
 import { FC } from "react";
+import Image from "next/image";
 
 interface ButtonProps {
   text: string;
   type: "submit" | "button";
-  color: string;
-  margin?: string;
+  inputClassName?: string;
   onClick?: () => void;
+  src: string;
+  alt: string;
 }
 
-const Button: FC<ButtonProps> = ({ text, type, color, margin, onClick }) => {
+const Button: FC<ButtonProps> = ({
+  text,
+  type,
+  inputClassName,
+  onClick,
+  src,
+  alt
+}) => {
   return (
-    <button
-      type={type}
-      className={`${color} ${margin} rounded-lg text-white font-bold py-5 px-2 min-w-[163px] sm:w-[17.77%] sm:max-w-[182px ml-5 text-center hover:opacity-70 transition-opacity cursor-pointer`}
-      onClick={onClick}
-    >
-      {text}
-    </button>
+    <div className="pt-3">  
+      <span className="absolute pt-2.5 pl-4">
+        <Image src={src} alt={alt} width={25} height={25} />
+      </span>
+      <button
+        type={type}
+        className={`pr-5 pl-12 py-3 outline outline-2 outline-gray-200 rounded-full ${inputClassName}`}
+        onClick={onClick}
+      >
+        {text}
+      </button>
+    </div>
   );
 };
 
