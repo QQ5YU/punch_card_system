@@ -16,16 +16,16 @@ const Button: FC<ButtonProps> = ({
   inputClassName,
   onClick,
   src,
-  alt
+  alt,
 }) => {
   return (
     <div className="pt-3">  
-      <span className="absolute pt-2.5 pl-4">
+      <span className={`${src == "" ? "hidden" : "absolute pt-2.5 pl-4"}`}>
         <Image src={src} alt={alt} width={25} height={25} />
       </span>
       <button
         type={type}
-        className={`pr-5 pl-12 py-3 outline outline-2 outline-gray-200 rounded-full ${inputClassName}`}
+        className={`${src == "" ? "pl-5" : "pl-12"} pr-5 py-3 outline outline-2 outline-gray-200 rounded-full ${inputClassName}`}
         onClick={onClick}
       >
         {text}

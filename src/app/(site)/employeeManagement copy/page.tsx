@@ -4,6 +4,8 @@ import Image from "next/image";
 import "./employeeManagement.css";
 import Button from "../components/Button";
 import Index from "../components/Index";
+import List from "../components/List";
+import ListBar from "../components/ListBar";
 import ListBar1 from "../components/ListBar";
 import Pages from "@/app/components/Pages";
 

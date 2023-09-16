@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import "./employeeManagement.css";
+import "./recordManagement.css";
 import Button from "../components/Button";
 import Index from "../components/Index";
 import ListBar1 from "../components/ListBar";

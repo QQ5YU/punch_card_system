@@ -14,12 +14,13 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        loginInputColor: "#F1F8FA",
-        buttonHoverColor: "#0AACDD90",
-        buttonOrangeColor: "#DD614A",
-        buttonBlueColor: "#0AACDD",
+        loginInput: "#F1F8FA",
+        buttonBlueHover: "#0AACDD90",
+        buttonOrange: "#DD614A",
+        buttonBlue: "#0AACDD",
         mainBlue: "#043593",
         darkBlue: "#1B2751",
+        checkedPurple: "#7F56D9",
       },
       boxShadow: {
         input:

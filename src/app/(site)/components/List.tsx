@@ -9,6 +9,7 @@ interface ListProps {
     team: string;
     phone: string;
     type: string;
+    is_?: boolean;
 }
 
 const List: FC<ListProps> = ({
@@ -19,9 +20,10 @@ const List: FC<ListProps> = ({
     team,
     phone,
     type,
+    is_,
 }) => {
     return (
-        <div className="flex px-8 py-5 space-x-44 outline outline-2 outline-gray-200">
+        <div className={`grid grid-cols-[minmax(250px,_1.5fr)_repeat(4,_1fr)_100px] px-8 py-5 outline outline-2 outline-gray-100 ${is_ ? "bg-[#FAFBFB]" : null}`}>
             <div className="flex">
                 <input type="checkbox" className="appearance-none self-center w-6 h-6 border-gray-400 border rounded-md
                 checked:bg-[url('/images/employeeManagement/tick.svg')]" />

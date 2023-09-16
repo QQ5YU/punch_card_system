@@ -14,17 +14,26 @@ export default function DesktopSidebar() {
       </h1>
       </header>
       {routes.map((link) => (
-        <Link
-          key={link.label}
-          href={link.href}
-          className={
-            link.active
-              ? "text-mainBlue font-bold text-xl block ml-12 my-5"
-              : "text-xl block ml-12 my-5 hover:opacity-70 transition-opacity"
-          }
-        >
-          {link.label}
-        </Link>
+        <div className="flex ml-12 space-x-3" key={link.label}>
+          <Image
+            src={link.src}
+            alt="index icon"
+            width={25}
+            height={25}
+            className=""
+          />
+          <Link
+            key={link.label}
+            href={link.href}
+            className={
+              link.active
+                ? "text-mainBlue font-bold text-xl block my-5"
+                : "text-xl block ml-12 my-5 hover:opacity-70 transition-opacity"
+            }
+          >
+            {link.label}
+          </Link>
+        </div>
       ))}
       <Footer />
     </aside>
