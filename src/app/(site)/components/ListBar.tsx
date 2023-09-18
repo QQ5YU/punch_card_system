@@ -1,4 +1,4 @@
-import List1 from "./List";
+import List from "./List";
 
 export default function ListBar() {
     return (
@@ -25,57 +25,62 @@ export default function ListBar() {
                 </label>
             </div>
             <div className="col-start-1 col-end-7">
-                <List1
+                <List
                     account="Single Account"
                     id="123456789"
                     department="XXXXXXXXXX"
                     position="主管"
                     team="XXXX團隊"
+                    time=""
                     phone="09123456789"
                     type="全職"
                 />
             </div>
             <div className="col-start-1 col-end-7">
-                <List1
+                <List
                     account="Single Account"
                     id="123456789"
                     department="XXXXXXXXXX"
                     position="主管"
                     team="XXXX團隊"
+                    time=""
                     phone="09123456789"
                     type="兼職"
                     is_={true}
                 />
             </div>
             <div className="col-start-1 col-end-7">
-                <List1
+                <List
                     account="Single Account"
                     id="123456789"
                     department="XXXXXXXXXX"
                     position="主管"
                     team="XXXX團隊"
+                    time=""
                     phone="09123456789"
                     type="工讀生"
                 />
             </div>
             <div className="col-start-1 col-end-7">
-                <List1
+                <List
                     account="Single Account"
                     id="123456789"
                     department="XXXXXXXXXX"
                     position="主管"
                     team="XXXX團隊"
+                    time=""
                     phone="09123456789"
                     type="工讀生"
                 />
             </div>
             <div className="col-start-1 col-end-7">
-                <List1
+                <List
                     account="Single Account"
                     id="123456789"
                     department="XXXXXXXXXX"
                     position="主管"
                     team="XXXX團隊"
+                    time=""
                     phone="09123456789"
                     type="兼職"
                 />

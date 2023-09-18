@@ -6,7 +6,7 @@ import Footer from "./Footer";
 export default function DesktopSidebar() {
   const routes = useRoutes();
   return (
-    <aside className="hidden md:block w-[15vw] bg-[#FBFBFB] min-h-screen relative outline outline-2 outline-gray-200">
+    <div className="hidden md:flex flex-col w-[15vw] bg-[#FBFBFB] min-h-screen relative outline outline-2 outline-gray-200">
       <header className="flex justify-center bg-[#FFF] py-[35px] mx-[0px] outline outline-2 outline-gray-200">
       <Image className="mx-[2px]" src="/images/logo.svg" width={30} height={30} alt="logo" />
       <h1 className="mt-[3px] text-[18px] text-mainBlue font-bold">
@@ -36,6 +36,6 @@ export default function DesktopSidebar() {
         </div>
       ))}
       <Footer />
-    </aside>
+    </div>
   );
 }

@@ -3,7 +3,7 @@ import Input from "./Input";
 
 export default function Header() {
   return (
-    <header className="flex h-[101px] w-[85vw] outline outline-2 outline-gray-200">
+    <header className="flex h-[101px] outline outline-2 outline-gray-200">
       <div className="flex w-screen">
         <div className="w-[65vw]">
           <Input

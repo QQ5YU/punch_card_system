@@ -4,14 +4,17 @@ import Image from "next/image";
 import "./recordManagement.css";
 import Button from "../components/Button";
 import Index from "../components/Index";
-import ListBar1 from "../components/ListBar";
+import ListBar from "../components/ListBar";
 import Pages from "@/app/components/Pages";
 
 export default function EmployeeManagement() {
   return (
     <div className="flex flex-col mx-10">
       <div className="flex justify-between">
-        <p className="text-darkBlue text-2xl font-bold py-8">員工管理</p>
+        <div className="flex space-x-10">
+          <p className="text-darkBlue text-2xl font-bold py-8">打卡記錄管理：一週</p>
+          <div className="self-center bg-gray-200 rounded-full text-xl font-bold px-5">&lt; 2023, 8/14 - 8/19 &gt;</div>
+        </div>
         <div className="flex space-x-3">
           <Button
             text="匯出總表"
@@ -19,13 +22,6 @@ export default function EmployeeManagement() {
             src="/images/employeeManagement/remit.svg"
             alt="logo"
             inputClassName=""
-          />
-          <Button
-            text="新增員工"
-            type="button"
-            src="/images/employeeManagement/add.svg"
-            alt="logo"
-            inputClassName="bg-darkBlue text-white"
           />
         </div>
       </div>
@@ -65,7 +61,7 @@ export default function EmployeeManagement() {
         </div>
       </div>
       <div className="">
-        <ListBar1 />
+        <ListBar />
       </div>
       <div>
         <Pages />

@@ -8,6 +8,7 @@ interface ListProps {
     position: string;
     team: string;
     phone: string;
+    time: string;
     type: string;
     is_?: boolean;
 }
@@ -19,6 +20,7 @@ const List: FC<ListProps> = ({
     position,
     team,
     phone,
+    time,
     type,
     is_,
 }) => {
@@ -43,11 +45,14 @@ const List: FC<ListProps> = ({
                 <p>{department}</p>
                 <p>{position}</p>
             </div>
-            <div className="self-center">
+            <div className={`${time == "" ? "self-center" : "hidden"}`}>
                 <p>{team}</p>
             </div>
             <div className="self-center">
                 <p>{phone}</p>
+            </div>
+            <div className={`${time == "" ? "hidden" : "self-center"}`}>
+                <p>{time}</p>
             </div>
             <div className="self-center">
                 <p>{type}</p>

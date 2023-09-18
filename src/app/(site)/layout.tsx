@@ -19,7 +19,7 @@ export default function RootLayout({
       <body>
         <div className="flex">
           <DesktopSidebar />
-          <div className="flex-col">
+          <div className="flex-col w-[85vw]">
             <Header />
             {children}
           </div>
