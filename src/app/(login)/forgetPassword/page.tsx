@@ -1,10 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
-import Button from "../components/Button";
-import Input from "../components/Input";
-import Hr from "../components/Hr";
-import Title from "../components/Title";
-import Description from "../components/Description";
+import Button from "../../components/LoginButton";
+import Input from "../../components/LoginInput";
+import Description from "../../components/Description";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -21,10 +18,10 @@ export default function ForgetPasswordPage() {
         height={347}
         alt="forgetPwd draw"
       />
-      <Hr />
+      <div className="hidden md:block bg-mainBlue w-px h-[448px] ml-[2.6%] mr-[5%] lg:mr-[8.2%]"></div>
       <div className="flex flex-col justify-center w-[28.22%] min-w-[320px] max-w-[340px]">
-        <Title text="忘記密碼" />
-        <Description
+      <p className="text-darkBlue font-bold text-center text-2xl">忘記密碼</p>
+      <Description
           fontSize="base"
           textColor="#564A4A"
           fontWeight="normal"

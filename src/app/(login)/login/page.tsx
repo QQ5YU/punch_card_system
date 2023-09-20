@@ -1,10 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import Button from "../components/Button";
-import Input from "../components/Input";
-import Hr from "../components/Hr";
-import Title from "../components/Title";
-import Description from "../components/Description";
+import Button from "../../components/LoginButton";
+import Input from "../../components/LoginInput";
+import Description from "../../components/Description";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -21,9 +19,9 @@ export default function Loginpage() {
         height={347}
         alt="login draw"
       />
-      <Hr />
-      <div className="flex flex-col justify-center">
-        <Title text="登入" />
+      <div className="hidden md:block bg-mainBlue w-px h-[448px] ml-[2.6%] mr-[5%] lg:mr-[8.2%]"></div>
+        <div className="flex flex-col justify-center">
+        <p className="text-darkBlue font-bold text-center text-2xl">登入</p>
         <Description
           fontSize="lg"
           textColor="darkBlue"

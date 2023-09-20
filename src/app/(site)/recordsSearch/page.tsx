@@ -1,7 +1,7 @@
 "use client";
 
 import Title from "../components/Title";
-import Input from "../components/Input";
+import Input from "../../components/SiteInput";
 import RecordList from "./components/RecordList";
 import DateRangePickerComponent from "./components/DateRangePicker";
 

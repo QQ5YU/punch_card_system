@@ -1,5 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
+import Modal from "./Modal";
 
 interface ListProps {
     account: string;
@@ -10,7 +11,9 @@ interface ListProps {
     phone: string;
     time: string;
     type: string;
+    is_late: boolean;
     is_?: boolean;
+    pth: string;
 }
 
 const List: FC<ListProps> = ({
@@ -22,12 +25,15 @@ const List: FC<ListProps> = ({
     phone,
     time,
     type,
+    is_late,
     is_,
+    pth,
 }) => {
+    const late = is_late ? "遲到" : "準時";
     return (
         <div className={`grid grid-cols-[minmax(250px,_1.5fr)_repeat(4,_1fr)_100px] px-8 py-5 outline outline-2 outline-gray-100 ${is_ ? "bg-[#FAFBFB]" : null}`}>
             <div className="flex">
-                <input type="checkbox" className="appearance-none self-center w-6 h-6 border-gray-400 border rounded-md
+                <input aria-label="none" type="checkbox" className="appearance-none self-center w-6 h-6 border-gray-400 border rounded-md
                 checked:bg-[url('/images/employeeManagement/tick.svg')]" />
                 <Image
                     src="/images/employeeManagement/indexICON.svg"
@@ -45,17 +51,20 @@ const List: FC<ListProps> = ({
                 <p>{department}</p>
                 <p>{position}</p>
             </div>
-            <div className={`${time == "" ? "self-center" : "hidden"}`}>
+            <div className={`${pth == "/employeeManagement" ? "self-center" : "hidden"}`}>
                 <p>{team}</p>
             </div>
             <div className="self-center">
                 <p>{phone}</p>
             </div>
-            <div className={`${time == "" ? "hidden" : "self-center"}`}>
+            <div className={`${pth == "/recordManagement" ? "self-center" : "hidden"}`}>
                 <p>{time}</p>
             </div>
-            <div className="self-center">
+            <div className={`${pth == "/employeeManagement" ? "self-center" : "hidden"}`}>
                 <p>{type}</p>
+            </div>
+            <div className={`${pth == "/recordManagement" ? "self-center" : "hidden"} ${is_late ? "text-red-500" : ""}`}>
+                <p>{late}</p>
             </div>
             <div className="flex space-x-5">
                 <Image
@@ -64,11 +73,15 @@ const List: FC<ListProps> = ({
                     width={25}
                     height={25}
                 />
-                <Image
+                {/* <Image
                     src="/images/employeeManagement/edit.svg"
                     alt="edit icon"
                     width={25}
                     height={25}
+                /> */}
+                <Modal
+                    src="/images/employeeManagement/edit.svg"
+                    alt="edit icon"
                 />
                 <Image
                     src="/images/employeeManagement/delete.svg"

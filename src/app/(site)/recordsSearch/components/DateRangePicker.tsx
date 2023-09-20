@@ -3,7 +3,7 @@ import { DateRange, Range, RangeKeyDict } from "react-date-range";
 import { useState } from "react";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
-import Input from "../../components/Input";
+import Input from "../../../components/SiteInput";
 
 // mainDoc: https://github.com/hypeserver/react-date-range
 // RefDoc: https://github.com/EvgeniyBudaev/react-typescript-ui/blob/master/src/uikit/components/DatePicker/DateRangePicker/DateRangePicker.tsx

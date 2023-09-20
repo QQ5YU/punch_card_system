@@ -6,6 +6,8 @@ interface ButtonProps {
   type: "submit" | "button";
   inputClassName?: string;
   onClick?: () => void;
+  src: string;
+  alt: string;
 }
 
 const Button: FC<ButtonProps> = ({
@@ -13,15 +15,22 @@ const Button: FC<ButtonProps> = ({
   type,
   inputClassName,
   onClick,
+  src,
+  alt,
 }) => {
   return (
-    <button
+    <div className="">  
+      <span className={`${src == "" ? "hidden" : "absolute pt-2.5 pl-4"}`}>
+        <Image src={src} alt={alt} width={25} height={25} />
+      </span>
+      <button
         type={type}
-        className={`px-5 py-3 outline outline-2 outline-gray-200 rounded-full ${inputClassName}`}
+        className={`${src == "" ? "pl-5" : "pl-12"} pr-5 py-3 rounded-full ${inputClassName}`}
         onClick={onClick}
-    >
+      >
         {text}
-    </button>
+      </button>
+    </div>
   );
 };
 

@@ -3,7 +3,7 @@ import { FC } from "react";
 import { useState } from "react";
 import Option from "./Option";
 import { options } from "../data/option";
-import Input from "@/app/(site)/components/Input";
+import Input from "@/app/components/SiteInput";
 interface SelectorProps {}
 
 const Selector: FC<SelectorProps> = () => {

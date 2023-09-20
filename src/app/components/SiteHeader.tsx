@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Input from "./Input";
+import Input from "./SiteInput";
 
 export default function Header() {
   return (

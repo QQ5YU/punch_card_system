@@ -1,7 +1,7 @@
 import useRoutes from "@/app/hooks/useRoutes";
 import Image from "next/image";
 import Link from "next/link";
-import Footer from "./Footer";
+import Footer from "./SidebarFooter";
 
 export default function DesktopSidebar() {
   const routes = useRoutes();

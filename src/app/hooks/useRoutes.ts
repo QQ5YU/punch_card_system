@@ -20,8 +20,8 @@ export default function useRoutes() {
       {
         src: "/images/sideBar/setting.svg",
         label: "設定",
-        href: "/recordManagement",
-        active: pathname.startsWith("/recordManagement1"),
+        href: "/recordsSearch",
+        active: pathname.startsWith("/recordsSearch"),
       },
     ],
     [pathname]

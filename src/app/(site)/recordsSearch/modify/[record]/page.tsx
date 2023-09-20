@@ -3,7 +3,7 @@ import Selector from "./components/Selector";
 import Title from "@/app/(site)/components/Title";
 import FileUpload from "./components/FileUpload";
 import { Note } from "./components/Note";
-import Button from "@/app/(site)/components/Button";
+import Button from "@/app/components/SiteButton";
 
 export default function modifyRecordPage({ params }: any) {
   const handleSubmit = () => {

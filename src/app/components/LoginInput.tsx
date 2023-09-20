@@ -23,14 +23,14 @@ const Input: FC<InputProps> = ({
   return (
     <>
       <input
-        className="w-full h-12 px-4 py-2 rounded-[10px] bg-loginInputColor focus:outline-mainBlue"
+        className="w-full h-12 px-4 py-2 rounded-[10px] bg-loginInput focus:outline-mainBlue"
         type="text"
         id={id}
         name={name}
       />
       <label
         htmlFor={id}
-        className="text-gray-400 absolute left-0 px-4 leading-[48px] transition duration-200 ease-out  bg-transparent"
+        className="text-gray-400 absolute left-0 px-4 leading-[48px] transition duration-200 ease-out bg-transparent"
       >
         <Image
           src={src}
