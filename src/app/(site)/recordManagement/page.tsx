@@ -11,13 +11,13 @@ export default function RecordManagement() {
           <p className="text-darkBlue text-2xl font-bold py-8">打卡記錄管理：一週</p>
           <div className="self-center bg-gray-200 rounded-full text-xl font-bold px-5">&lt; 2023, 8/14 - 8/19 &gt;</div>
         </div>
-        <div className="flex space-x-3">
+        <div className="flex space-x-3 mt-3">
           <Button
             text="匯出總表"
             type="button"
             src="/images/employeeManagement/remit.svg"
             alt="logo"
-            inputClassName=""
+            inputClassName="outline outline-2 outline-gray-200"
           />
         </div>
       </div>
