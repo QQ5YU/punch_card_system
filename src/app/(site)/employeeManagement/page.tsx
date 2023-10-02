@@ -1,11 +1,15 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
-import "./employeeManagement.css";
 import Button from "../../components/SiteButton";
+import Modal from "../../components/NewModal"
+import "./employeeManagement.css";
 
 export default function EmployeeManagement() {
+  const [ButtonPop, setButtonPop] = useState(false);
   return (
     <div className="flex flex-col mx-10">
+      <Modal is_open={ButtonPop} setButtonPop={setButtonPop} />
       <div className="flex justify-between">
         <p className="text-darkBlue text-2xl font-bold py-8">員工管理</p>
         <div className="flex space-x-3 mt-3">
@@ -22,6 +26,7 @@ export default function EmployeeManagement() {
             src="/images/employeeManagement/add.svg"
             alt="logo"
             inputClassName="bg-darkBlue text-white"
+            onClick={() => setButtonPop(true)}
           />
         </div>
       </div>

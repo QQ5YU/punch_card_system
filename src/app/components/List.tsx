@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
-import Modal from "./Modal";
+import Modal from "./EditModal";
 
 interface ListProps {
     account: string;
@@ -82,6 +82,7 @@ const List: FC<ListProps> = ({
                 <Modal
                     src="/images/employeeManagement/edit.svg"
                     alt="edit icon"
+                    pth={pth}
                 />
                 <Image
                     src="/images/employeeManagement/delete.svg"
