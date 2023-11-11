@@ -4,12 +4,25 @@ import Button from "../../components/LoginButton";
 import Input from "../../components/LoginInput";
 import Description from "../../components/Description";
 import type { Metadata } from "next";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
+import { getSession } from "next-auth/react";
+
 
 export const metadata: Metadata = {
   title: "Line@ 打卡後臺管理系統 登入",
 };
 
 export default function Loginpage() {
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+  const [authState, setAuthState] = useState({
+    employeeId: "",
+    password: "",
+  });
+  const [isAlert, setIsAlert] = useState(false);
+
   return (
     <div className="max-w-screen-lg mx-auto flex items-center justify-center">
       <Image
