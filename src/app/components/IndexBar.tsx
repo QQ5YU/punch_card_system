@@ -8,7 +8,7 @@ export default function IndexBar() {
             <Index name="員工編號"/>
             <Index name="部門"/>
             <Index name="職位"/>
-            <Index name="團隊"/>
+            {/* <Index name="團隊"/> */}
             <Index name="聯絡方式"/>
             <Index name="類型"/>
             <div className="flex space-x-2.5">
