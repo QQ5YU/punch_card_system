@@ -9,6 +9,7 @@ interface InputProps {
   alt: string;
   id: string;
   name: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Input: FC<InputProps> = ({
@@ -19,6 +20,7 @@ const Input: FC<InputProps> = ({
   alt,
   id,
   name,
+  onChange,
 }) => {
   return (
     <>
@@ -27,6 +29,7 @@ const Input: FC<InputProps> = ({
         type="text"
         id={id}
         name={name}
+        onChange={onChange}
       />
       <label
         htmlFor={id}
