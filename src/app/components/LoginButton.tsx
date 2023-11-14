@@ -4,7 +4,7 @@ import { LuLoader2 } from "react-icons/lu";
 interface ButtonProps {
   text: string;
   type: "submit" | "button";
-  isLoading: boolean;
+  isLoading?: boolean;
 }
 
 const Button: FC<ButtonProps> = ({ text, type, isLoading }) => {

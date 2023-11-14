@@ -35,7 +35,7 @@ const Input: FC<InputProps> = ({
         placeholder=" "
         required
         onChange={onChange}
-        className="bg-loginInputColor input absolute left-0 top-0 h-full w-full rounded-[10px] border-2 border-transparent px-4 py-2 outline-none transition duration-200"
+        className="bg-loginInput input absolute left-0 top-0 h-full w-full rounded-[10px] border-2 border-transparent px-4 py-2 outline-none transition duration-200"
       />
       <label
         htmlFor={id}
@@ -48,7 +48,7 @@ const Input: FC<InputProps> = ({
           className="mr-4 inline-block align-middle"
           alt={alt}
         />
-        <span className="align-middle font-bold">{label}</span>
+        <span className="align-middle font-bold  text-gray-400">{label}</span>
       </label>
     </div>
   );
