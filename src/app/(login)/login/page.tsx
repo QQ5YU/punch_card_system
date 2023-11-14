@@ -75,6 +75,7 @@ export default function Loginpage() {
           <div className="mt-[74px] relative">
             <Input
               label="員工編號"
+              value={authState.employeeId}
               id="employeeId"
               name="member-number"
               src="images/login/user.svg"
@@ -88,6 +89,7 @@ export default function Loginpage() {
           <div className="mt-[29px] relative">
             <Input
               label="員工密碼"
+              value={authState.password}
               id="password"
               name="member-password"
               src="images/login/password.svg"

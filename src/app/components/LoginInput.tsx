@@ -7,6 +7,7 @@ interface InputProps {
   width: number;
   height: number;
   alt: string;
+  value: string;
   id: string;
   name: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -21,19 +22,24 @@ const Input: FC<InputProps> = ({
   id,
   name,
   onChange,
+  value,
 }) => {
   return (
-    <>
+    <div className="relative h-12">
       <input
-        className="w-full h-12 px-4 py-2 rounded-[10px] bg-loginInput focus:outline-mainBlue"
         type="text"
         id={id}
         name={name}
+        autoComplete="off"
+        value={value}
+        placeholder=" "
+        required
         onChange={onChange}
+        className="bg-loginInputColor input absolute left-0 top-0 h-full w-full rounded-[10px] border-2 border-transparent px-4 py-2 outline-none transition duration-200"
       />
       <label
         htmlFor={id}
-        className="text-gray-400 absolute left-0 px-4 leading-[48px] transition duration-200 ease-out bg-transparent"
+        className="input-text absolute left-4 top-3 bg-opacity-0 transition duration-200"
       >
         <Image
           src={src}
@@ -44,7 +50,7 @@ const Input: FC<InputProps> = ({
         />
         <span className="align-middle font-bold">{label}</span>
       </label>
-    </>
+    </div>
   );
 };
 
