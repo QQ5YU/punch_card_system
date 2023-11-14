@@ -7,16 +7,7 @@ import "./employeeManagement.css";
 
 export default function EmployeeManagement() {
   const [ButtonPop, setButtonPop] = useState(false);
-  const [allEmployeeData, setAllEmployeeData] = useState([]);
-  useEffect(() => {
-    fetch("/api/allAcountSearch")
-      .then((res) => res.json())
-      .then((data) => {
-        setAllEmployeeData(data);
-        console.log(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+
   return (
     <div className="flex flex-col mx-10">
       <Modal is_open={ButtonPop} setButtonPop={setButtonPop} />
