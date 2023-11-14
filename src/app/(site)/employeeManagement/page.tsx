@@ -1,12 +1,22 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Button from "../../components/SiteButton";
-import Modal from "../../components/NewModal"
+import Modal from "../../components/NewModal";
 import "./employeeManagement.css";
 
 export default function EmployeeManagement() {
   const [ButtonPop, setButtonPop] = useState(false);
+  const [allEmployeeData, setAllEmployeeData] = useState([]);
+  useEffect(() => {
+    fetch("/api/allAcountSearch")
+      .then((res) => res.json())
+      .then((data) => {
+        setAllEmployeeData(data);
+        console.log(data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
   return (
     <div className="flex flex-col mx-10">
       <Modal is_open={ButtonPop} setButtonPop={setButtonPop} />
@@ -37,10 +47,10 @@ export default function EmployeeManagement() {
         </div>
         <div className="flex space-x-1 absolute right-0 top-4">
           <Image
-              src="/images/employeeManagement/indexICON.svg"
-              alt="index icon"
-              width={25}
-              height={25}
+            src="/images/employeeManagement/indexICON.svg"
+            alt="index icon"
+            width={25}
+            height={25}
           />
           <p className="text-gray-500">更新於2023/8/16</p>
         </div>
